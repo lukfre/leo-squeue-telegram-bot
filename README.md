@@ -1,6 +1,10 @@
 # squeue-telegram
 
-Telegram bot that monitors `squeue --me` on a SLURM cluster and notifies you of job changes. Runs on a login node, stdlib only (no pip install).
+Telegram bots (stdlib only, no pip install) that monitors:
+- `squeue --me` on a SLURM cluster (runs on a login node)
+- `nvidia-smi` on linux servers
+
+The bots notify you of job changes. 
 
 ## Create the Telegram bot
 
@@ -35,6 +39,7 @@ Detach with `Ctrl-b, d`.
 ## Commands
 
 - `/q` — show the queue right now
+- `/disk` — show the disk usage (only linux servers) 
 - `/watch [seconds]` — turn on change notifications (default 300s)
 - `/stop` — turn off notifications
 - `/interval <sec>` — change the polling interval
